@@ -10,6 +10,6 @@ class Settings(BaseSettings):
     database_url: str = "sqlite+aiosqlite:///./alpha_copilot.db"
     anthropic_api_key: str = ""
     worker_pool_size: int = 4
-    model_name: str = "claude-sonnet-4-5-20250514"
+    model_name: str = "claude-sonnet-4-20250514"
 
     model_config = {"env_file": str(_ENV_FILE), "env_file_encoding": "utf-8"}

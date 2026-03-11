@@ -16,6 +16,10 @@ logging.basicConfig(level=logging.INFO)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Startup: ensure DB tables exist (SQLite dev — idempotent)
+    from app.db.init_db import create_tables
+    await create_tables()
+
     # Startup: initialize worker pool
     settings = get_settings()
     app.state.worker_pool = WorkerPool(settings)
