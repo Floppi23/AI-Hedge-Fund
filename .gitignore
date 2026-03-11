@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+.venv/
+venv/
+*.egg
+
+# Node
+node_modules/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+
+# Reference repo (cloned for study only)
+reference/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+pgdata/
+
+# Poetry
+poetry.lock
+
+# SQLite dev database
+*.db
+
+# Claude Code local settings
+.claude/settings.local.json
